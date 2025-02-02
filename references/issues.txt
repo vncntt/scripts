@@ -1,0 +1,18 @@
+
+
+
+some websites like pubmed are DOIs but they don't have the DOI in the url.
+they can be handled as regular websites but it's not the most efficient.
+can search if a website is secretly a DOI.
+not high priority.
+
+examples: https://academic.oup.com/afraf/article/107/427/157/30448?login=true
+https://pubmed.ncbi.nlm.nih.gov/19186354/
+https://link.springer.com/article/10.1007/s10461-024-04528-3
+https://www.nature.com/articles/218663b0
+
+
+
+
+
+
