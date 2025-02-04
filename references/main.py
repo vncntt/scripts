@@ -77,13 +77,26 @@ def youtube_handler(url:str) -> Dict:
 
     upload_date = datetime.fromisoformat(snippet['publishedAt'].replace('Z', '+00:00'))
     formatted_date = upload_date.strftime('%b %d, %Y')
+
+    # Create a short identifier from video title
+    prompt = f"""Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It’s Unbelievable via Youtube" -> "liquidrobot"
+    
+    Content: {snippet['title']}"""
+    
+    url_ending = parse_reference(message(prompt))['url_ending']
+    
     return {
         'title': snippet['title'],
         'author': snippet['channelTitle'],
         'date': formatted_date,
         'source':'YouTube',
         'original_url': url,
-        'short_url': f"ve42.co/yt-{video_id}EDITLATER"
+        'short_url': f"ve42.co/yt-{url_ending}"
     }
 
 
@@ -136,13 +149,24 @@ def doi_handler(url: str) -> Dict:
     else:
         formatted_date = "No date"
     
+    prompt = f"""Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "United States Patent Office: US2776232. (Jan 1957) via US patent office" -> "patentb"
+    "IEEE Spectrum. (20 May, 2020). RoBeetle: A Micro Robot Powered by Liquid Fuel" -> "robeetlefuel"
+    
+    Content: {data.get('title', [''])[0]}"""
+    
+    url_ending = parse_reference(message(prompt))['url_ending']
+    
     return {
         'title': data.get('title', [''])[0],
         'author': author_str,
         'date': formatted_date,
         'source': data.get('container-title', [''])[0] or "Academic Paper",
         'original_url': url,
-        'short_url': f"ve42.co/doi-{doi.replace('/', '_')}_EDITLATER"
+        'short_url': f"ve42.co/doi-{url_ending}"
     }
 
 
@@ -172,7 +196,7 @@ def website_handler(url: str) -> Dict:
         'date': formatted_date,
         'source': parsed_data['source_organization'] or 'Website',
         'original_url': url,
-        'short_url': f"ve42.co/web-{urlparse(url).netloc}_EDITLATER"
+        'short_url': f"ve42.co/web-{parsed_data.get('url_ending', urlparse(url).netloc)}"
     }
 
 def parse_reference(text):
@@ -228,6 +252,14 @@ def llm_parser(url):
     - author (personal or organizational)
     - date (prioritize publication dates in YYYY-MM-DD format)
     - source_organization (publisher/site owner)
+    - url_ending (create a unique 5-8 character ending using letters a-z that relates to the content)
+
+    Examples of good url endings:
+    "Kodak Eastman In Wikipedia" -> "kodake"
+    "Electric Tram 1881 In Wikipedia" -> "tram"
+    "Mullis, K. B. (1990). The Unusual Origin of the Polymerase Chain Reaction. Scientific American" -> "Mullis1990"
+    "Rediscovering Yellowstone via UW-Madison" -> "Madison2017"
+
     
     RESPOND WITH ONLY THE JSON AND NOTHING ELSE
     
@@ -253,13 +285,25 @@ def wikipedia_handler(soup: BeautifulSoup, url: str) -> Dict:
     else:
         formatted_date = 'No date'
     
+    prompt = f"""Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "Kodak Eastman In Wikipedia" -> "kodake"
+    "Electric Tram 1881 In Wikipedia" -> "tram"
+    "Water Quenched Steel In Wikipedia" -> "quench"
+    
+    Content: {title}"""
+    
+    url_ending = parse_reference(message(prompt))['url_ending']
+    
     return {
         'title': title,
         'author': 'Wikipedia contributors',
         'date': formatted_date,
         'source': 'Wikipedia',
         'original_url': url,
-        'short_url': f"ve42.co/wiki-{title.lower().replace(' ', '-')}_EDITLATER"
+        'short_url': f"ve42.co/wiki-{url_ending}"
     }
 
 
@@ -285,7 +329,15 @@ def pdf_handler(url:str) -> Dict:
     - author (personal or organizational)
     - date (prioritize publication dates in YYYY-MM-DD format)
     - source_organization (publisher/site owner)
+    - url_ending (create a unique 5-8 character ending using letters a-z that relates to the content)
 
+    Examples of good url endings:
+    "Overview of materials for Cyanoacrylate Adhesive" -> "matweb"
+    "United States Patent Office: US2776232. (Jan 1957) via US patent office" -> "patentb"
+    "IEEE Spectrum. (20 May, 2020). RoBeetle: A Micro Robot Powered by Liquid Fuel" -> "robeetlefuel"
+    "Rediscovering Yellowstone via UW-Madison" -> "Madison2017"
+ 
+    
     RESPOND WITH ONLY THE JSON AND NOTHING ELSE
 
     Content: {text_content}
@@ -309,7 +361,7 @@ def pdf_handler(url:str) -> Dict:
         'date': formatted_date,
         'source': parsed_data['source_organization'] or 'PDF Document',
         'original_url': url,
-        'short_url': f"ve42.co/pdf-{pdf_id}_EDITLATER"
+        'short_url': f"ve42.co/{parsed_data.get('url_ending', pdf_id)}"
     }
 
 def format_references(csv_file: str, output_file: str):
