@@ -183,17 +183,17 @@ def website_handler(url: str) -> Dict:
     parsed_data = llm_parser(url)
     
     # Convert the date format if possible
-    try:
-        date_obj = datetime.strptime(parsed_data['date'], '%Y-%m-%d')
-        formatted_date = date_obj.strftime('%b %d, %Y')
-    except:
-        formatted_date = parsed_data['date'] or 'No date'
+    # try:
+    #     date_obj = datetime.strptime(parsed_data['date'], '%Y-%m-%d')
+    #     formatted_date = date_obj.strftime('%b %d, %Y')
+    # except:
+    #     formatted_date = parsed_data['date'] or 'No date'
 
     # Return in the same format as other handlers
     return {
         'title': parsed_data['title'],
-        'author': parsed_data['author'] or 'Unknown',
-        'date': formatted_date,
+        'author': '', # author is always Wikipedia contributors
+        'date': '', # wikipedia has no date
         'source': parsed_data['source_organization'] or 'Website',
         'original_url': url,
         'short_url': f"ve42.co/web-{parsed_data.get('url_ending', urlparse(url).netloc)}"
@@ -256,13 +256,13 @@ def llm_parser(url):
     html_content = response.text
     soup = BeautifulSoup(html_content, 'html.parser')
     prompt = f"""Return ONLY a JSON object wrapped in ```json tags. The JSON must contain:
-    {
+    {{
         "title": "string - most prominent heading",
-        "author": "string - personal or organizational",
+        "author": "string - personal or organizational", 
         "date": "string - YYYY-MM-DD format",
         "source_organization": "string - publisher/site owner",
         "url_ending": "string - unique 5-8 character ending using a-z"
-    }
+    }}
 
     Examples of good url endings:
     "Kodak Eastman In Wikipedia" -> "kodake"
@@ -283,16 +283,16 @@ def wikipedia_handler(soup: BeautifulSoup, url: str) -> Dict:
     title = soup.find('h1', {'id': 'firstHeading'}).text
     
     # Get last modified date
-    last_modified = soup.find('li', {'id': 'footer-info-lastmod'})
-    if last_modified:
-        date_str = last_modified.text.replace('This page was last edited on ', '')
-        try:
-            date_obj = datetime.strptime(date_str, '%d %B %Y, at %H:%M')
-            formatted_date = date_obj.strftime('%b %d, %Y')
-        except:
-            formatted_date = 'No date'
-    else:
-        formatted_date = 'No date'
+    # last_modified = soup.find('li', {'id': 'footer-info-lastmod'})
+    # if last_modified:
+    #     date_str = last_modified.text.replace('This page was last edited on ', '')
+    #     try:
+    #         date_obj = datetime.strptime(date_str, '%d %B %Y, at %H:%M')
+    #         formatted_date = date_obj.strftime('%b %d, %Y')
+    #     except:
+    #         formatted_date = 'No date'
+    # else:
+    #     formatted_date = 'No date'
     
     prompt = f"""Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
     Return only JSON with a single field 'url_ending'.
@@ -308,8 +308,8 @@ def wikipedia_handler(soup: BeautifulSoup, url: str) -> Dict:
     
     return {
         'title': title,
-        'author': 'Wikipedia contributors',
-        'date': formatted_date,
+        'author': '',
+        'date': '',
         'source': 'Wikipedia',
         'original_url': url,
         'short_url': f"ve42.co/wiki-{url_ending}"
@@ -375,7 +375,8 @@ def pdf_handler(url:str) -> Dict:
 
 def format_references(csv_file: str, output_file: str):
     """Format references from CSV into a bibliography-style text file."""
-    df = pd.read_csv(csv_file)
+    # Read CSV with empty strings instead of NaN
+    df = pd.read_csv(csv_file, na_values=[], keep_default_na=False)
     
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write("References:\n\n")

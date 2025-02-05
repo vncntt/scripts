@@ -1,9 +1,23 @@
 References:
 
+O. Scherzer (Sep 1936). �ber einige Fehler von Elektronenlinsen. Zeitschrift f�r Physik - ve42.co/doi-linsenfehler
 Ondrej L. Krivanek, Niklas Dellby, Matthew F. Murfitt (Dec 19, 2017). Aberration Correction in Electron Microscopy. Handbook of Charged Particle Optics - ve42.co/doi-aberrcorr
-Wikipedia contributors (No date). Flat lens. Wikipedia - ve42.co/wiki-flatlens
-Wikipedia contributors (No date). Field ion microscope. Wikipedia - ve42.co/wiki-fimi
-Wikipedia contributors (No date). Field-emission microscopy. Wikipedia - ve42.co/wiki-femit
+H. Rose (2003). Advances in Electron Optics. Springer Series in Materials Science - ve42.co/doi-electrono
+Ernst Ruska (Dec 08, 1986). The Development of the Electron Microscope and of Electron Microscopy. Nobel Foundation - ve42.co/microscopeb
+Flat lens Wikipedia - ve42.co/wiki-flatlens
+Lens Wikipedia - ve42.co/wiki-lens
+Field ion microscope Wikipedia - ve42.co/wiki-fionmic
+Field-emission microscopy Wikipedia - ve42.co/wiki-femit
+Spherical aberration Wikipedia - ve42.co/wiki-sphab
+Scherzer's theorem Wikipedia - ve42.co/wiki-scherz
+caltech (Feb 05, 2015). Part 1: EM Lenses - G. Jensen. YouTube - ve42.co/yt-emlenses
+caltech (Feb 05, 2015). Part 1: Sample Chamber - G. Jensen. YouTube - ve42.co/yt-samplecham
+Scherzer's Theorem | Corrected Electron Optical Systems CEOS GmbH - ve42.co/web-scherze
+A short introduction to aberration correction with focus on Scherzer's and Rose's contributions Ulm University - ve42.co/web-salvecc
+Massachusetts Institute of Technology (MIT) (Dec 20, 2021). Giving bug-like, flying robots a boost. YouTube - ve42.co/yt-bugflybot
+Francis Villatoro (Jun 15, 2009). Leading edge vortex stably attached near the base of a freely flying maple seed Acer pseudo-platanus. YouTube - ve42.co/yt-vortexseed
+JPLraw (Apr 29, 2020). NASA Mars Helicopter Ingenuity Animations. YouTube - ve42.co/yt-ingenuity
 Rolls-Royce (Jul 18, 2018). Rolls-Royce | SWARM Robots. YouTube - ve42.co/yt-swarmrobots
+NBC News (Aug 27, 2018). Robot Rescue: Behind The Technology Deployed For Disaster Relief | NBC Nightly News. YouTube - ve42.co/yt-robotrescue
 5.11 Tactical (Sep 09, 2021). Call to Service: The Final Rescue of 9/11. YouTube - ve42.co/yt-finalrescue
 The New York Times (Sep 30, 2014). Colony Collapse: The Mystery of the Missing Bees | Retro Report | The New York Times. YouTube - ve42.co/yt-colonycollapse

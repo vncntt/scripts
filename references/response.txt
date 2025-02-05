@@ -1,8 +1,0 @@
-```json
-{
-  "title": "Cosmological Significance of Time Reversal",
-  "author": "KARY MULLIS",
-  "date": "1968-05-18",
-  "source_organization": "Nature"
-}
-```
