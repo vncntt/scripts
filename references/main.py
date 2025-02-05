@@ -84,7 +84,7 @@ def youtube_handler(url:str) -> Dict:
     
     Examples of good url endings:
     "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
-    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It’s Unbelievable via Youtube" -> "liquidrobot"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It's Unbelievable via Youtube" -> "liquidrobot"
     
     Content: {snippet['title']}"""
     
@@ -217,22 +217,30 @@ def message(text):
                 "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
             },
             data=json.dumps({
-                # other option: amazon/nova-lite-v1
                 "model": "minimax/minimax-01",
                 "messages": [
+                    {
+                        "role": "system",
+                        "content": "You are a JSON-only response bot. Always wrap your JSON in ```json\n and \n``` tags. Never include any other text."
+                    },
                     {
                         "role": "user",
                         "content": (text)
                     }
                 ]
-                
             })
         )
         if response.status_code == 200:
             data = response.json()
+            response_text = data['choices'][0]['message']['content']
+            
+            # Log the response to a file
+            with open('llm_responses.txt', 'a', encoding='utf-8') as f:
+                f.write(f"\n\n=== {datetime.now().isoformat()} ===\nPrompt:\n{text}\n\nResponse:\n{response_text}\n")
+            
             print(f"{len(tokenizer.encode(text))} tokens")
             print(f"cost is {0.02*len(tokenizer.encode(text))/1000000} USD")
-            return data['choices'][0]['message']['content']
+            return response_text
         else:
             print(f"Error: {response.status_code}")
     except Exception as e:
@@ -247,12 +255,14 @@ def llm_parser(url):
     response = requests.get(url, headers=headers)
     html_content = response.text
     soup = BeautifulSoup(html_content, 'html.parser')
-    prompt = f"""Analyze this web content snippet and return JSON with:
-    - title (most prominent heading)
-    - author (personal or organizational)
-    - date (prioritize publication dates in YYYY-MM-DD format)
-    - source_organization (publisher/site owner)
-    - url_ending (create a unique 5-8 character ending using letters a-z that relates to the content)
+    prompt = f"""Return ONLY a JSON object wrapped in ```json tags. The JSON must contain:
+    {
+        "title": "string - most prominent heading",
+        "author": "string - personal or organizational",
+        "date": "string - YYYY-MM-DD format",
+        "source_organization": "string - publisher/site owner",
+        "url_ending": "string - unique 5-8 character ending using a-z"
+    }
 
     Examples of good url endings:
     "Kodak Eastman In Wikipedia" -> "kodake"
@@ -260,7 +270,6 @@ def llm_parser(url):
     "Mullis, K. B. (1990). The Unusual Origin of the Polymerase Chain Reaction. Scientific American" -> "Mullis1990"
     "Rediscovering Yellowstone via UW-Madison" -> "Madison2017"
 
-    
     RESPOND WITH ONLY THE JSON AND NOTHING ELSE
     
     Content: {soup.prettify()}"""

@@ -1,15 +1,32 @@
 title,author,date,source,original_url,short_url
-Sutori,Sutori,No date,Sutori,https://www.sutori.com/en/story/dr-harry-coover-jr--JF8NgVSmuyTBxyX3RhieCKxD,ve42.co/web-sutori
-Closed-loop recyclable plastics from poly(ethyl cyanoacrylate),"Allison J. Christy, Scott T. Phillips","Mar 24, 2023",Science Advances,https://www.science.org/doi/10.1126/sciadv.adg2295,ve42.co/doi-cyanoa
-About Cyanoacrylate Adhesives,Permabond,"Nov 01, 2022",Permabond,"https://permabond.com/products/cyanoacrylate-adhesives/#:~:text=Selector%20Guide,between%209%20and%2010%20seconds",ve42.co/web-cyanoacrylate
-Kodak,Wikipedia contributors,No date,Wikipedia,https://en.wikipedia.org/wiki/Kodak#Advanced_Material_&_Chemicals,ve42.co/wiki-kodak
-Harry Coover and the Invention of Super Glue,Tabea Tietz,"Mar 06, 2022",SciHi Blog,http://scihi.org/harry-coover-super-glue-cyanoacrylate/,ve42.co/web-coover2022
-Cyanoacrylate Chemistry and Polymerization Mechanisms,"Humphrey Sam Samuel, Ugo Nweke-Maraizu, Emmanuel E Etim","May 01, 2024",Progress in Chemical and Biochemical Research,https://www.pcbiochemres.com/article_192843.html,ve42.co/web-pcbr2024
-Radical polymerization,Wikipedia contributors,No date,Wikipedia,https://en.wikipedia.org/wiki/Radical_polymerization,ve42.co/wiki-radpoly
-Overview of materials for Cyanoacrylate Adhesive,"MatWeb, LLC","Jan 01, 2023","MatWeb, LLC",https://www.matweb.com/search/datasheettext.aspx?matguid=d0d7dbec7666421caf8aa08724b634c5,ve42.co/web-cyanoac
-MXED) oCYANOACRYLATE.ADHESIVE COMPOSITIONS,"Newton H. Shearer, Jr., and Harry W. Coover, Jr.","Jan 01, 1957",United States Patent Office,https://patentimages.storage.googleapis.com/9b/48/57/3269c56f37579f/US2776232.pdf,ve42.co/pdf-cyanoadhes
-Medical Grade Cyanoacrylate Adhesive Market Size Growth Report: Unlocking Future Potential,MarketQuest Analysis,"Nov 28, 2024",LinkedIn,https://www.linkedin.com/pulse/medical-grade-cyanoacrylate-adhesive-market-size-rkhpc,ve42.co/web-rkhpc
-Think Super Glue Can Lift A Pickup Truck?,Science Channel,"Dec 22, 2017",YouTube,https://www.youtube.com/watch?v=U7deOOmrxBM,ve42.co/yt-superlift
-Learn How Loctite SF 7452 Can Accelerate Bonding When using Loctite 454,Loctite & Teroson UK,"Apr 04, 2023",YouTube,https://www.youtube.com/watch?v=20DH4LG1f2M,ve42.co/yt-loctitebond
-Presidential AIDS Advisory Panel Report,"Panel of experts invited by the President of the Republic of South Africa, the Honourable Mr Thabo Mbeki","Mar 01, 2001",Presidential AIDS Advisory Panel,https://www.gov.za/sites/default/files/gcis_document/201409/aidspanelpdf0.pdf,ve42.co/pdf-aidsreport
-Collision Resilient Insect-Scale Soft-Actuated Aerial Robots With High Agility,"YuFeng Chen, Siyi Xu, Zhijian Ren, Pakpong Chirarattananon","May 01, 2021",IEEE,https://dspace.mit.edu/bitstream/handle/1721.1/142906/Chen_2020_TRO_09357346.pdf?sequence=2&isAllowed=y,ve42.co/pdf-insectsoft
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://link.springer.com/article/10.1007/BF01349606#citeas,
+Aberration Correction in Electron Microscopy,"Ondrej L. Krivanek, Niklas Dellby, Matthew F. Murfitt","Dec 19, 2017",Handbook of Charged Particle Optics,https://www.taylorfrancis.com/chapters/edit/10.1201/9781420045550-12/aberration-correction-electron-microscopy-ondrej-krivanek-niklas-dellby-matthew-murfitt,ve42.co/doi-aberrcorr
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://link.springer.com/chapter/10.1007/978-3-662-07766-5_5#citeas,
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://www.nobelprize.org/uploads/2018/06/ruska-lecture.pdf,
+Flat lens,Wikipedia contributors,No date,Wikipedia,https://en.wikipedia.org/wiki/Flat_lens,ve42.co/wiki-flatlens
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://en.wikipedia.org/wiki/Lens#Lensmaker's_equation,
+Field ion microscope,Wikipedia contributors,No date,Wikipedia,https://en.wikipedia.org/wiki/Field_ion_microscope,ve42.co/wiki-fimi
+Field-emission microscopy,Wikipedia contributors,No date,Wikipedia,https://en.wikipedia.org/wiki/Field-emission_microscopy,ve42.co/wiki-femit
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://en.wikipedia.org/wiki/Spherical_aberration,
+ERROR,Expecting value: line 1 column 1 (char 0),,,"https://en.wikipedia.org/wiki/Scherzer%27s_theorem#:~:text=Scherzer's%20theorem%20is%20a%20theorem,lenses%20because%20of%20unavoidable%20aberrations.",
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://www.youtube.com/watch?v=SKjxp-al_UI&t=1573s,
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://www.youtube.com/watch?v=EaXbk9OQDHw&t=324s,
+ERROR,"Invalid format specifier ' ""string - most prominent heading"",
+        ""author"": ""string - personal or organizational"",
+        ""date"": ""string - YYYY-MM-DD format"",
+        ""source_organization"": ""string - publisher/site owner"",
+        ""url_ending"": ""string - unique 5-8 character ending using a-z""
+    ' for object of type 'str'",,,https://www.ceos-gmbh.de/en/basics/scherzerstheorem,
+ERROR,"Invalid format specifier ' ""string - most prominent heading"",
+        ""author"": ""string - personal or organizational"",
+        ""date"": ""string - YYYY-MM-DD format"",
+        ""source_organization"": ""string - publisher/site owner"",
+        ""url_ending"": ""string - unique 5-8 character ending using a-z""
+    ' for object of type 'str'",,,https://www.salve-project.de/newspress/a-short-introduction-to-aberration-correction-with-focus-on-scherzer-and-rose.html,
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://www.youtube.com/watch?v=j_YD01uuGtE,
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://www.youtube.com/watch?v=WLBaIf3ofTs,
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://www.youtube.com/watch?v=vnH4yD0s8QM,
+Rolls-Royce | SWARM Robots,Rolls-Royce,"Jul 18, 2018",YouTube,https://www.youtube.com/watch?v=3xMpcXCWrnA,ve42.co/yt-swarmrobots
+ERROR,Expecting value: line 1 column 1 (char 0),,,https://www.youtube.com/watch?v=0yHjQKXWqYI,
+Call to Service: The Final Rescue of 9/11,5.11 Tactical,"Sep 09, 2021",YouTube,https://www.youtube.com/watch?v=E7ANxk0aErs,ve42.co/yt-finalrescue
+Colony Collapse: The Mystery of the Missing Bees | Retro Report | The New York Times,The New York Times,"Sep 30, 2014",YouTube,https://www.youtube.com/watch?v=38Wj4byHML0,ve42.co/yt-colonycollapse

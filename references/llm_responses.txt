@@ -1,0 +1,445 @@
+
+
+=== 2025-02-04T11:14:15.135432 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "United States Patent Office: US2776232. (Jan 1957) via US patent office" -> "patentb"
+    "IEEE Spectrum. (20 May, 2020). RoBeetle: A Micro Robot Powered by Liquid Fuel" -> "robeetlefuel"
+    
+    Content: �ber einige Fehler von Elektronenlinsen
+
+Response:
+
+
+
+=== 2025-02-04T11:14:17.247701 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "United States Patent Office: US2776232. (Jan 1957) via US patent office" -> "patentb"
+    "IEEE Spectrum. (20 May, 2020). RoBeetle: A Micro Robot Powered by Liquid Fuel" -> "robeetlefuel"
+    
+    Content: Aberration Correction in Electron Microscopy
+
+Response:
+```json
+{
+  "url_ending": "aberrcorr"
+}
+```
+
+
+=== 2025-02-04T11:14:18.134841 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "United States Patent Office: US2776232. (Jan 1957) via US patent office" -> "patentb"
+    "IEEE Spectrum. (20 May, 2020). RoBeetle: A Micro Robot Powered by Liquid Fuel" -> "robeetlefuel"
+    
+    Content: Advances in Electron Optics
+
+Response:
+
+
+
+=== 2025-02-04T11:14:19.190842 ===
+Prompt:
+Analyze this PDF content snippet and return JSON with:
+    - title (most prominent heading)
+    - author (personal or organizational)
+    - date (prioritize publication dates in YYYY-MM-DD format)
+    - source_organization (publisher/site owner)
+    - url_ending (create a unique 5-8 character ending using letters a-z that relates to the content)
+
+    Examples of good url endings:
+    "Overview of materials for Cyanoacrylate Adhesive" -> "matweb"
+    "United States Patent Office: US2776232. (Jan 1957) via US patent office" -> "patentb"
+    "IEEE Spectrum. (20 May, 2020). RoBeetle: A Micro Robot Powered by Liquid Fuel" -> "robeetlefuel"
+    "Rediscovering Yellowstone via UW-Madison" -> "Madison2017"
+ 
+    
+    RESPOND WITH ONLY THE JSON AND NOTHING ELSE
+
+    Content: THE DEVELOPMENT OF THE 
+ELECTRON MICROSCOPE AND OF ELECTRON MICROSCOPY 
+Nobel lecture, December 8, 1986 
+by 
+ERNST RUSKA 
+Max-Eyth-Strasse 20, D-1000 BERLIN 33 
+A. Parents’ house, family 
+A month ago, the Nobel Foundation sent me its yearbook of 1985. From it I 
+learnt that many Nobel lectures are downright scientific lectures, interspersed 
+with curves, synoptic tables and quotations. I am somewhat reluctant to give 
+here such a lecture on something that can be looked up in any modern 
+schoolbook on physics. I will therefore not so much report here on physical and 
+technical details and their connections but rather on the human experiences - 
+some joyful events and many disappointments which had not been spared me 
+and my colleagues on our way to the final breakthrough. This is not meant to 
+be a complaint though; I rather feel that such experiences of scientists in quest 
+of new approaches are absolutely understandable, or even normal. 
+In such a representation I must, of course, consider the influence of my 
+environment, in particular of my family. There have already been some scien- 
+tists in my family: My father, Julius Ruska, was a historian of sciences in 
+Heidelberg and Berlin; my uncle, Max Wolf, astronomer in Heidelberg; his 
+assistant, a former pupil of my father and my godfather, August Kopff, Direc- 
+tor of the Institute for astronomical calculation of the former Friedrich-Wil- 
+helm University in Berlin. A cousin of my mother, Alfred Hoche, was Professor 
+for Psychiatry in Freiburg/Breisgau; my grandfather from my mother’s side, 
+Adalbert Merx, theologian in 
+  and Heidelberg. 
+My parents lived in Heidelberg and had seven children. I was the fifth, my 
+brother Helmut the sixth. To him I had particularly close and friendly relations 
+as long as I can remember. Early, optical instruments made a strong impression 
+on us. Several times Uncle Max had shown us the telescopes at the observatory 
+on the Königstuhl near Heidelberg headed by him. With the light microscope 
+as well we soon had impressive, yet contradictory, relations. In the second floor 
+of our house, my father had two study rooms connected by a broad sliding door 
+which usually was open. One room he used for his scientific historical studies 
+relating to classical philology, the other for his scientific interests, in particular 
+mineralogy, botany and zoology. When our games with neighbours’ kids in 
+front of the house became too noisy, he would knock at the window panes. This 356 Physics 1986 
+usually only having a brief effect, he soon knocked a second time, this time 
+considerably louder. At the third knock, Helmut and I had to come to his room 
+and sit still on a low wooden stool, dos à dos, up to one hour at 2 m distance 
+from his desk. While doing so we would see on a table in the other room the 
+pretty yellowish wooden box that housed my father’s big Zeiss microscope, 
+which we were strictly forbidden to touch. He sometimes demonstrated to us 
+interesting objects under the microscope, it is true; for good reasons, however, 
+he feared that childrens’ hands would damage the objective or the specimen by 
+clumsy manipulation of the coarse and line drive. Thus, our first relation to the 
+value of microscopy was not solely positive. 
+B. School, vocational choice 
+Much more positive was, several years later, the excellent biology instruction 
+my brother had through his teacher Adolf Leiber and the very thorough teaching I received through my teacher Karl Reinig. To my great pleasure I recently read an impressive report on Reinig’s personality in the Memoirs of a 
+two-years-older student at my school, the later theoretical physicist Walter 
+Elsasser. Even today I remember the profound impression Reinig’s comments 
+made upon me when he explained that the movement of electrons in an 
+electrostatic field followed the same laws as the movement of inert mass in 
+gravitational fields. He even tried to explain to us the limitation of microscopi- 
+cal resolution due to the wavelength of light. I certainly did not clearly 
+understand all this then, because soon after that on one of our many walks through the woods around Heidelberg I had a long discussion on that subject 
+with my brother Helmut, who already showed an inclination to medicine, and 
+my classmate Karl 
+ who later studied medicine as well. 
+In our College (Humanistisches Gymnasium), we had up to 17 hours of 
+Latin, Greek and French per week. In contrast to my father, who was extreme- 
+ly gifted for languages, I produced only very poor results in this field. My 
+father, at that time teacher at the same school, daily learnt about my minus 
+efforts from his colleagues and blamed me for being too lazy, so that I had some 
+sorrowful school years. My Greek teacher, a fellow student of my father, had a 
+more realistic view of things: He gave me for my confirmation the book “Hinter 
+Pflug und Schraubstock” (Behind plow and vise) by the Swabian “poet” 
+engineer Max Eyth (1836-1906). I had always been fascinated by technical 
+progress; in particular I was later interested in the development of aeronautics, 
+the construction of airships and air planes. The impressive book of Max Eyth 
+definitely prompted me to study engineering. My father, having studied sci- 
+ences at the universities of 
+  Berlin and Heidelberg, obviously regard- 
+ed study at a Technical High School as not being adequate and offered me one 
+physics semester at a university. I had, however, the strong feeling that 
+engineering was more to my liking and refused. 
+C. The cathode-ray oscillograph and the short coil 
+After I had studied two years electrotechnical engineering in Munich, my 
+father received a call to become head of a newly founded Institute for the E. Ruska 357 
+History of Sciences in Berlin in 1927. Thus, after my pre-examination in 
+Munich I came to Berlin for the second half of my studies. Here I specialized in 
+high-voltage techniques and electrical plants and heard, among others, the 
+lectures of Professor Adolf Matthias. At the end of the summer term in 1928 he 
+told us about his plan of setting up a small group of people to develop from the 
+Braun tube an efficient cathode-ray oscillograph for the measurement of very 
+fast electrical processes in power stations and on open-air high-voltage trans- 
+mission lines. Perhaps with the memory of my physics school lesson in the back 
+of my head, I immediately volunteered for this task and became the youngest 
+collaborator of the group, which was headed by Dr. Ing. Max Knoll. My first 
+attempts with experimental work had been made in the practical physics 
+course at the Technical High School in Munich under Professor Jonathan 
+Zenneck, and now in the group of Max Knoll. As a newcomer I was first 
+entrusted with some vacuum-technical problems which were important to all of 
+us. Through the personality of Max Knoll, there was a companionable rela- 
+tionship in the group, and at our communal afternoon coffee with him the 
+scientific day-to-day-problems of each member of the group were openly dis- 
+cussed. As I did not dislike calculations, and our common aim was the 
+development of cathode-ray oscillographs for a desired measuring capability, I wanted to devise a suitable method of dimensioning such cathode-ray oscillo- graphs in my “Studienarbeit” - a prerequisite for being allowed to proceed to 
+the Diploma examination. 
+The most important parameters for accuracy of measurement and writing 
+speed af cathode-ray oscillographs are the diameter of the writing spot and its energy density. To produce small and bright writing spots, the electron beams emerging divergently from the cathode had to be concentrated in a small 
+writing spot on the fluorescent screen of the cathode-ray oscillograph. For this, 
+already Rankin in 1905 [1] used a short dc-fed coil, as had been used by earlier experimentalists with electron beams (formerly called “glow” or “cathode 
+rays”). Even before that, Hittorf (1869) and Birkeland (1896) used the rota- tionally symmetric field lying in front of a cylindrical magnet pole for focussing 
+cathode rays. A more precise idea of the effect of the axially symmetric, i.e. inhomogeneous magnet field of such poles or coils on the electron bundle 
+alongside of their axes had long been unclear. 
+Therefore, Hans Busch [3] at Jena calculated the electron trajectories in 
+such an electron ray bundle and found that the magnetic field of the short coil 
+has the same effect on the electron bundle as has the convex glass lens with a 
+defined focal length on a light bundle. The focal length of this “magnetic 
+electron lens” can be changed continuously by means of the coil current. Busch 
+wanted to check experimentally his theory but for reasons of time he could not 
+carry out new experiments. He made use of the experimental results he had 
+already obtained sixteen years previously in Gottingen. These were, however, in extremely unsatisfactory agreement with the theory. Perhaps this was the 
+reason that Busch did not draw at least the practical conclusion from his lens theory to image some object with such a coil. 
+    
+
+Response:
+
+
+
+=== 2025-02-04T11:14:20.776346 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "Kodak Eastman In Wikipedia" -> "kodake"
+    "Electric Tram 1881 In Wikipedia" -> "tram"
+    "Water Quenched Steel In Wikipedia" -> "quench"
+    
+    Content: Flat lens
+
+Response:
+```json
+{
+  "url_ending": "flatlens"
+}
+```
+
+
+=== 2025-02-04T11:14:21.821463 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "Kodak Eastman In Wikipedia" -> "kodake"
+    "Electric Tram 1881 In Wikipedia" -> "tram"
+    "Water Quenched Steel In Wikipedia" -> "quench"
+    
+    Content: Lens
+
+Response:
+
+
+
+=== 2025-02-04T11:14:23.311134 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "Kodak Eastman In Wikipedia" -> "kodake"
+    "Electric Tram 1881 In Wikipedia" -> "tram"
+    "Water Quenched Steel In Wikipedia" -> "quench"
+    
+    Content: Field ion microscope
+
+Response:
+```json
+{
+  "url_ending": "fimi"
+}
+```
+
+
+=== 2025-02-04T11:14:24.665398 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "Kodak Eastman In Wikipedia" -> "kodake"
+    "Electric Tram 1881 In Wikipedia" -> "tram"
+    "Water Quenched Steel In Wikipedia" -> "quench"
+    
+    Content: Field-emission microscopy
+
+Response:
+```json
+{
+  "url_ending": "femit"
+}
+```
+
+
+=== 2025-02-04T11:14:25.738770 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "Kodak Eastman In Wikipedia" -> "kodake"
+    "Electric Tram 1881 In Wikipedia" -> "tram"
+    "Water Quenched Steel In Wikipedia" -> "quench"
+    
+    Content: Spherical aberration
+
+Response:
+
+
+
+=== 2025-02-04T11:14:26.726315 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "Kodak Eastman In Wikipedia" -> "kodake"
+    "Electric Tram 1881 In Wikipedia" -> "tram"
+    "Water Quenched Steel In Wikipedia" -> "quench"
+    
+    Content: Scherzer's theorem
+
+Response:
+
+
+
+=== 2025-02-04T11:14:27.506392 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It's Unbelievable via Youtube" -> "liquidrobot"
+    
+    Content: Part 1: EM Lenses - G. Jensen
+
+Response:
+
+
+
+=== 2025-02-04T11:14:28.029540 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It's Unbelievable via Youtube" -> "liquidrobot"
+    
+    Content: Part 1: Sample Chamber - G. Jensen
+
+Response:
+
+
+
+=== 2025-02-04T11:14:31.204715 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It's Unbelievable via Youtube" -> "liquidrobot"
+    
+    Content: Giving bug-like, flying robots a boost
+
+Response:
+
+
+
+=== 2025-02-04T11:14:31.741358 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It's Unbelievable via Youtube" -> "liquidrobot"
+    
+    Content: Leading edge vortex stably attached near the base of a freely flying maple seed Acer pseudo-platanus
+
+Response:
+
+
+
+=== 2025-02-04T11:14:32.383627 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It's Unbelievable via Youtube" -> "liquidrobot"
+    
+    Content: NASA Mars Helicopter Ingenuity Animations
+
+Response:
+
+
+
+=== 2025-02-04T11:14:34.436131 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It's Unbelievable via Youtube" -> "liquidrobot"
+    
+    Content: Rolls-Royce | SWARM Robots
+
+Response:
+```json
+{
+  "url_ending": "swarmrobots"
+}
+```
+
+
+=== 2025-02-04T11:14:35.026583 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It's Unbelievable via Youtube" -> "liquidrobot"
+    
+    Content: Robot Rescue: Behind The Technology Deployed For Disaster Relief | NBC Nightly News
+
+Response:
+
+
+
+=== 2025-02-04T11:14:36.644543 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It's Unbelievable via Youtube" -> "liquidrobot"
+    
+    Content: Call to Service: The Final Rescue of 9/11
+
+Response:
+```json
+{
+  "url_ending": "finalrescue"
+}
+```
+
+
+=== 2025-02-04T11:14:37.990504 ===
+Prompt:
+Create a unique 5-8 character URL ending using letters a-z that relates to this content. 
+    Return only JSON with a single field 'url_ending'.
+    
+    Examples of good url endings:
+    "MIT Robotics. (21 May, 2023). Agile, robust, and multifunctional micro-aerial-robots" -> "agilerobust"
+    "AsapSCIENCE. (19 Nov, 2022). This Is The First LIQUID Robot, And It's Unbelievable via Youtube" -> "liquidrobot"
+    
+    Content: Colony Collapse: The Mystery of the Missing Bees | Retro Report | The New York Times
+
+Response:
+```json
+{
+  "url_ending": "colonycollapse"
+}
+```

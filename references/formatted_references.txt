@@ -1,16 +1,9 @@
 References:
 
-Sutori (No date). Sutori. Sutori - ve42.co/web-sutori
-Allison J. Christy, Scott T. Phillips (Mar 24, 2023). Closed-loop recyclable plastics from poly(ethyl cyanoacrylate). Science Advances - ve42.co/doi-cyanoa
-Permabond (Nov 01, 2022). About Cyanoacrylate Adhesives. Permabond - ve42.co/web-cyanoacrylate
-Wikipedia contributors (No date). Kodak. Wikipedia - ve42.co/wiki-kodak
-Tabea Tietz (Mar 06, 2022). Harry Coover and the Invention of Super Glue. SciHi Blog - ve42.co/web-coover2022
-Humphrey Sam Samuel, Ugo Nweke-Maraizu, Emmanuel E Etim (May 01, 2024). Cyanoacrylate Chemistry and Polymerization Mechanisms. Progress in Chemical and Biochemical Research - ve42.co/web-pcbr2024
-Wikipedia contributors (No date). Radical polymerization. Wikipedia - ve42.co/wiki-radpoly
-MatWeb, LLC (Jan 01, 2023). Overview of materials for Cyanoacrylate Adhesive. MatWeb, LLC - ve42.co/web-cyanoac
-Newton H. Shearer, Jr., and Harry W. Coover, Jr. (Jan 01, 1957). MXED) oCYANOACRYLATE.ADHESIVE COMPOSITIONS. United States Patent Office - ve42.co/pdf-cyanoadhes
-MarketQuest Analysis (Nov 28, 2024). Medical Grade Cyanoacrylate Adhesive Market Size Growth Report: Unlocking Future Potential. LinkedIn - ve42.co/web-rkhpc
-Science Channel (Dec 22, 2017). Think Super Glue Can Lift A Pickup Truck?. YouTube - ve42.co/yt-superlift
-Loctite & Teroson UK (Apr 04, 2023). Learn How Loctite SF 7452 Can Accelerate Bonding When using Loctite 454. YouTube - ve42.co/yt-loctitebond
-Panel of experts invited by the President of the Republic of South Africa, the Honourable Mr Thabo Mbeki (Mar 01, 2001). Presidential AIDS Advisory Panel Report. Presidential AIDS Advisory Panel - ve42.co/pdf-aidsreport
-YuFeng Chen, Siyi Xu, Zhijian Ren, Pakpong Chirarattananon (May 01, 2021). Collision Resilient Insect-Scale Soft-Actuated Aerial Robots With High Agility. IEEE - ve42.co/pdf-insectsoft
+Ondrej L. Krivanek, Niklas Dellby, Matthew F. Murfitt (Dec 19, 2017). Aberration Correction in Electron Microscopy. Handbook of Charged Particle Optics - ve42.co/doi-aberrcorr
+Wikipedia contributors (No date). Flat lens. Wikipedia - ve42.co/wiki-flatlens
+Wikipedia contributors (No date). Field ion microscope. Wikipedia - ve42.co/wiki-fimi
+Wikipedia contributors (No date). Field-emission microscopy. Wikipedia - ve42.co/wiki-femit
+Rolls-Royce (Jul 18, 2018). Rolls-Royce | SWARM Robots. YouTube - ve42.co/yt-swarmrobots
+5.11 Tactical (Sep 09, 2021). Call to Service: The Final Rescue of 9/11. YouTube - ve42.co/yt-finalrescue
+The New York Times (Sep 30, 2014). Colony Collapse: The Mystery of the Missing Bees | Retro Report | The New York Times. YouTube - ve42.co/yt-colonycollapse
