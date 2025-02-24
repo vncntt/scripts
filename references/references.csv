@@ -1,22 +1,11 @@
-title,author,date,source,original_url,short_url
-�ber einige Fehler von Elektronenlinsen,O. Scherzer,Sep 1936,Zeitschrift f�r Physik,https://link.springer.com/article/10.1007/BF01349606#citeas,ve42.co/doi-linsenfehler
-Aberration Correction in Electron Microscopy,"Ondrej L. Krivanek, Niklas Dellby, Matthew F. Murfitt","Dec 19, 2017",Handbook of Charged Particle Optics,https://www.taylorfrancis.com/chapters/edit/10.1201/9781420045550-12/aberration-correction-electron-microscopy-ondrej-krivanek-niklas-dellby-matthew-murfitt,ve42.co/doi-aberrcorr
-Advances in Electron Optics,H. Rose,2003,Springer Series in Materials Science,https://link.springer.com/chapter/10.1007/978-3-662-07766-5_5#citeas,ve42.co/doi-electrono
-The Development of the Electron Microscope and of Electron Microscopy,Ernst Ruska,"Dec 08, 1986",Nobel Foundation,https://www.nobelprize.org/uploads/2018/06/ruska-lecture.pdf,ve42.co/microscopeb
-Flat lens,,,Wikipedia,https://en.wikipedia.org/wiki/Flat_lens,ve42.co/wiki-flatlens
-Lens,,,Wikipedia,https://en.wikipedia.org/wiki/Lens#Lensmaker's_equation,ve42.co/wiki-lens
-Field ion microscope,,,Wikipedia,https://en.wikipedia.org/wiki/Field_ion_microscope,ve42.co/wiki-fionmic
-Field-emission microscopy,,,Wikipedia,https://en.wikipedia.org/wiki/Field-emission_microscopy,ve42.co/wiki-femit
-Spherical aberration,,,Wikipedia,https://en.wikipedia.org/wiki/Spherical_aberration,ve42.co/wiki-sphab
-Scherzer's theorem,,,Wikipedia,"https://en.wikipedia.org/wiki/Scherzer%27s_theorem#:~:text=Scherzer's%20theorem%20is%20a%20theorem,lenses%20because%20of%20unavoidable%20aberrations.",ve42.co/wiki-scherz
-Part 1: EM Lenses - G. Jensen,caltech,"Feb 05, 2015",YouTube,https://www.youtube.com/watch?v=SKjxp-al_UI&t=1573s,ve42.co/yt-emlenses
-Part 1: Sample Chamber - G. Jensen,caltech,"Feb 05, 2015",YouTube,https://www.youtube.com/watch?v=EaXbk9OQDHw&t=324s,ve42.co/yt-samplecham
-Scherzer's Theorem | Corrected Electron Optical Systems,,,CEOS GmbH,https://www.ceos-gmbh.de/en/basics/scherzerstheorem,ve42.co/web-scherze
-A short introduction to aberration correction with focus on Scherzer's and Rose's contributions,,,Ulm University,https://www.salve-project.de/newspress/a-short-introduction-to-aberration-correction-with-focus-on-scherzer-and-rose.html,ve42.co/web-salvecc
-"Giving bug-like, flying robots a boost",Massachusetts Institute of Technology (MIT),"Dec 20, 2021",YouTube,https://www.youtube.com/watch?v=j_YD01uuGtE,ve42.co/yt-bugflybot
-Leading edge vortex stably attached near the base of a freely flying maple seed Acer pseudo-platanus,Francis Villatoro,"Jun 15, 2009",YouTube,https://www.youtube.com/watch?v=WLBaIf3ofTs,ve42.co/yt-vortexseed
-NASA Mars Helicopter Ingenuity Animations,JPLraw,"Apr 29, 2020",YouTube,https://www.youtube.com/watch?v=vnH4yD0s8QM,ve42.co/yt-ingenuity
-Rolls-Royce | SWARM Robots,Rolls-Royce,"Jul 18, 2018",YouTube,https://www.youtube.com/watch?v=3xMpcXCWrnA,ve42.co/yt-swarmrobots
-Robot Rescue: Behind The Technology Deployed For Disaster Relief | NBC Nightly News,NBC News,"Aug 27, 2018",YouTube,https://www.youtube.com/watch?v=0yHjQKXWqYI,ve42.co/yt-robotrescue
-Call to Service: The Final Rescue of 9/11,5.11 Tactical,"Sep 09, 2021",YouTube,https://www.youtube.com/watch?v=E7ANxk0aErs,ve42.co/yt-finalrescue
-Colony Collapse: The Mystery of the Missing Bees | Retro Report | The New York Times,The New York Times,"Sep 30, 2014",YouTube,https://www.youtube.com/watch?v=38Wj4byHML0,ve42.co/yt-colonycollapse
+source_type,title,author,date,source,original_url,short_url
+website,Are You Smart Enough to Work at Google?,William Poundstone,2012-01-04,Oneworld Publications,https://books.google.co.uk/books/about/Are_You_Smart_Enough_to_Work_at_Google.html?id=nVPY8KL5FUQC&redir_esc=y,ve42.co/areyousm
+doi,On the Movement of Animals,Giovanni Alfonso Borelli,1989,SOURCE NOT FOUND,"https://link.springer.com/book/10.1007/978-3-642-73812-8#:~:text=De%20Motu%20animalium%2C%20Borelli's%20life,%2C%20jumping%2C%20swimming%20and%20flying.",ve42.co/onthemov
+website,"In Head-Hunting, Big Data May Not Be Such a Big Deal",ADAM BRYANT,2013-06-20,The New York Times,https://archive.is/Rexwl,ve42.co/inheadhu
+website,Drag Forces,OpenStax College,NOT_FOUND,OpenStax,https://courses.lumenlearning.com/suny-physics/chapter/5-2-drag-forces/,ve42.co/dragforc
+doi,"Leg design and jumping technique for humans, other vertebrates and insects",UNKNOWN,"Feb 28, 1995",Philosophical Transactions of the Royal Society of London. Series B: Biological Sciences,https://royalsocietypublishing.org/doi/10.1098/rstb.1995.0024,ve42.co/legdesig
+website,Access Check,NOT_FOUND,2025-02-24,ITHAKA,https://www.jstor.org/stable/2407721,ve42.co/accessch
+pdf,"Scaling of Morphology, Bite Force and Feeding Kinematics in an Iguanian and a Scleroglossan Lizard",Jay J. Meyers,2002,Shaker Publishing,http://www.anthonyherrel.fr/publications/Meyers%20et%20al%202002%20Topics.pdf,ve42.co/Meyers%20et%20al%202002%20Topics
+website,Relative Net Vertical Impulse Determines Jumping Performance,NOT_FOUND,NOT_FOUND,ResearchGate GmbH,https://www.researchgate.net/publication/51574303_Relative_Net_Vertical_Impulse_Determines_Jumping_Performance,ve42.co/relative
+doi,Evidence that gecko setae are coated with an ordered nanometre-thin lipid film,"Mette H. Rasmussen, Katinka Rønnow Holler, Joe E. Baio, Cherno Jaye, Daniel A. Fischer, Stanislav N. Gorb, Tobias Weidner",Jul 2022,Biology Letters,https://royalsocietypublishing.org/doi/10.1098/rsbl.2022.0093,ve42.co/evidence
+website,8.3: Body Orientation During a Skydive,Lawrence Davis,2023-01-17,OpenOregon,https://phys.libretexts.org/Bookshelves/Conceptual_Physics/Body_Physics_-_Motion_to_Metabolism_(Davis)/08%3A_Skydiving/8.03%3A_Body_Orientation_During_a_Skydive,ve42.co/83bodyor
