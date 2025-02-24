@@ -1,7 +1,7 @@
-=== New Run Starting 2025-02-23T20:08:55.657896 ===
+=== New Run Starting 2025-02-23T20:48:28.103822 ===
 
 
-=== 2025-02-23T20:08:58.537801 ===
+=== 2025-02-23T20:48:30.663453 ===
 Prompt:
 Return ONLY a JSON object wrapped in ```json tags. The JSON must contain:
     {
@@ -27,7 +27,7 @@ Response:
 ```
 
 
-=== 2025-02-23T20:09:02.704301 ===
+=== 2025-02-23T20:48:35.384184 ===
 Prompt:
 Return ONLY a JSON object wrapped in ```json tags. The JSON must contain:
     {
@@ -61,7 +61,7 @@ Response:
 ```
 
 
-=== 2025-02-23T20:09:05.061327 ===
+=== 2025-02-23T20:48:37.381139 ===
 Prompt:
 Return ONLY a JSON object wrapped in ```json tags. The JSON must contain:
     {
@@ -82,12 +82,12 @@ Response:
     "title": "Drag Forces",
     "author": "OpenStax College",
     "date": "NOT_FOUND",
-    "source_organization": "OpenStax"
+    "source_organization": "Connexions"
 }
 ```
 
 
-=== 2025-02-23T20:09:07.250908 ===
+=== 2025-02-23T20:48:39.861098 ===
 Prompt:
 Return ONLY a JSON object wrapped in ```json tags. The JSON must contain:
     {
@@ -99,7 +99,7 @@ Return ONLY a JSON object wrapped in ```json tags. The JSON must contain:
 
     RESPOND WITH ONLY THE JSON AND NOTHING ELSE. If you don't find one of the fields, return NOT_FOUND as the value.
     
-    Content: JSTOR: Access Check Access Check Our systems have detected unusual traffic activity from your network. Please complete this reCAPTCHA to demonstrate that it's you making the requests and not a robot. If you are having trouble seeing or completing this challenge, this page may help. If you continue to experience issues, you can contact JSTOR support . Block Reference: #168537b9-f265-11ef-be6f-cccc7acf4b53 VID: # IP: 69.196.41.95 Date and time: Mon, 24 Feb 2025 04:09:05 GMT Javascript is disabled Go back to JSTOR ©2000- ITHAKA. All Rights Reserved. JSTOR®, the JSTOR logo, JPASS®, and ITHAKA® are registered trademarks of ITHAKA.
+    Content: JSTOR: Access Check Access Check Our systems have detected unusual traffic activity from your network. Please complete this reCAPTCHA to demonstrate that it's you making the requests and not a robot. If you are having trouble seeing or completing this challenge, this page may help. If you continue to experience issues, you can contact JSTOR support . Block Reference: #9c85f1f9-f26a-11ef-934c-5d84b85b0930 VID: # IP: 69.196.41.95 Date and time: Mon, 24 Feb 2025 04:48:37 GMT Javascript is disabled Go back to JSTOR ©2000- ITHAKA. All Rights Reserved. JSTOR®, the JSTOR logo, JPASS®, and ITHAKA® are registered trademarks of ITHAKA.
 
 
 Response:
@@ -113,7 +113,7 @@ Response:
 ```
 
 
-=== 2025-02-23T20:09:13.236859 ===
+=== 2025-02-23T20:48:43.574489 ===
 Prompt:
 Analyze this PDF content snippet and return JSON with:
     - title (most prominent heading)
@@ -355,14 +355,14 @@ Response:
 ```json
 {
     "title": "Scaling of Morphology, Bite Force and Feeding Kinematics in an Iguanian and a Scleroglossan Lizard",
-    "author": "Jay J. Meyers",
+    "author": "Jay J. Meyers, Anthony Herrel, James Birch",
     "date": "2002",
     "source_organization": "Shaker Publishing"
 }
 ```
 
 
-=== 2025-02-23T20:09:15.022203 ===
+=== 2025-02-23T20:48:45.443218 ===
 Prompt:
 Return ONLY a JSON object wrapped in ```json tags. The JSON must contain:
     {
@@ -374,21 +374,21 @@ Return ONLY a JSON object wrapped in ```json tags. The JSON must contain:
 
     RESPOND WITH ONLY THE JSON AND NOTHING ELSE. If you don't find one of the fields, return NOT_FOUND as the value.
     
-    Content: ResearchGate - Temporarily Unavailable Access denied You do not have access to www.researchgate.net. The site owner may have set restrictions that prevent you from accessing the site. Ray ID: 916c9952a9a70ff9 Timestamp: 2025-02-24 04:09:13 UTC Your IP address: 2607:f720:f00:4010:f427:f02:53b9:2bb4 Requested URL: www.researchgate.net/publication/51574303_Relative_Net_Vertical_Impulse_Determines_Jumping_Performance Error reference number: 1020 Server ID: FL_446F278 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Ray ID: 916c9952a9a70ff9 Client IP: 2607:f720:f00:4010:f427:f02:53b9:2bb4 © ResearchGate GmbH. All rights reserved.
+    Content: ResearchGate - Temporarily Unavailable Access denied You do not have access to www.researchgate.net. The site owner may have set restrictions that prevent you from accessing the site. Ray ID: 916cd330c9910fe3 Timestamp: 2025-02-24 04:48:43 UTC Your IP address: 2607:f720:f00:4010:f427:f02:53b9:2bb4 Requested URL: www.researchgate.net/publication/51574303_Relative_Net_Vertical_Impulse_Determines_Jumping_Performance Error reference number: 1020 Server ID: FL_446F261 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Ray ID: 916cd330c9910fe3 Client IP: 2607:f720:f00:4010:f427:f02:53b9:2bb4 © ResearchGate GmbH. All rights reserved.
 
 
 Response:
 ```json
 {
-    "title": "Relative Net Vertical Impulse Determines Jumping Performance",
+    "title": "NOT_FOUND",
     "author": "NOT_FOUND",
-    "date": "NOT_FOUND",
+    "date": "2025-02-24",
     "source_organization": "ResearchGate GmbH"
 }
 ```
 
 
-=== 2025-02-23T20:09:20.128360 ===
+=== 2025-02-23T20:48:53.224347 ===
 Prompt:
 Return ONLY a JSON object wrapped in ```json tags. The JSON must contain:
     {
@@ -486,13 +486,13 @@ Response:
 {
     "title": "8.3: Body Orientation During a Skydive",
     "author": "Lawrence Davis",
-    "date": "2023-01-17",
+    "date": "2024-03-12",
     "source_organization": "OpenOregon"
 }
 ```
 
 
-=== 2025-02-23T20:09:22.474236 ===
+=== 2025-02-23T20:48:55.510102 ===
 Prompt:
 Are You Smart Enough to Work at Google?. ve42.co/areyousm
 
@@ -501,7 +501,7 @@ Response:
 Are You Smart Enough to Work at Google? ve42.co/areyousm
 
 
-=== 2025-02-23T20:09:24.471163 ===
+=== 2025-02-23T20:48:57.619216 ===
 Prompt:
 Giovanni Alfonso Borelli (1989). On the Movement of Animals. SOURCE NOT FOUND - ve42.co/onthemov
 
@@ -510,7 +510,7 @@ Response:
 Giovanni Alfonso Borelli (1989). On the Movement of Animals. SOURCE NOT FOUND - ve42.co/onthemov
 
 
-=== 2025-02-23T20:09:27.414730 ===
+=== 2025-02-23T20:48:59.752582 ===
 Prompt:
 In Head-Hunting, Big Data May Not Be Such a Big Deal. ve42.co/inheadhu
 
@@ -519,7 +519,7 @@ Response:
 In Head-Hunting, Big Data May Not Be Such a Big Deal. ve42.co/inheadhu
 
 
-=== 2025-02-23T20:09:29.487627 ===
+=== 2025-02-23T20:49:01.890104 ===
 Prompt:
 Drag Forces. ve42.co/dragforc
 
@@ -528,7 +528,7 @@ Response:
 Drag Forces. ve42.co/dragforc
 
 
-=== 2025-02-23T20:09:32.955185 ===
+=== 2025-02-23T20:49:04.379722 ===
 Prompt:
 UNKNOWN (Feb 28, 1995). Leg design and jumping technique for humans, other vertebrates and insects. Philosophical Transactions of the Royal Society of London. Series B: Biological Sciences - ve42.co/legdesig
 
@@ -537,46 +537,73 @@ Response:
 UNKNOWN (Feb 28, 1995). Leg design and jumping technique for humans, other vertebrates and insects. Philosophical Transactions of the Royal Society of London. Series B: Biological Sciences - ve42.co/legdesig
 
 
-=== 2025-02-23T20:09:35.199588 ===
+=== 2025-02-23T20:49:06.080017 ===
 Prompt:
 Access Check. ve42.co/accessch
 
 
 Response:
-Access check. ve42.co/accessch
+Access Check. ve42.co/accessch
 
 
-=== 2025-02-23T20:09:37.383460 ===
+=== 2025-02-23T20:49:07.963683 ===
 Prompt:
-Jay J. Meyers (2002). Scaling of Morphology, Bite Force and Feeding Kinematics in an Iguanian and a Scleroglossan Lizard. Shaker Publishing - ve42.co/Meyers%20et%20al%202002%20Topics
+Jay J. Meyers, Anthony Herrel, James Birch (2002). Scaling of Morphology, Bite Force and Feeding Kinematics in an Iguanian and a Scleroglossan Lizard. Shaker Publishing - ve42.co/meyers20
 
 
 Response:
-Jay J. Meyers (2002). Scaling of Morphology, Bite Force and Feeding Kinematics in an Iguanian and a Scleroglossan Lizard. Shaker Publishing - ve42.co/meyers02topics
+Jay J. Meyers et al. (2002). Scaling of Morphology, Bite Force and Feeding Kinematics in an Iguanian and a Scleroglossan Lizard. Shaker Publishing - ve42.co/meyers20
 
 
-=== 2025-02-23T20:09:39.300378 ===
+=== 2025-02-23T20:49:11.571754 ===
 Prompt:
-Relative Net Vertical Impulse Determines Jumping Performance. ve42.co/relative
+NOT_FOUND. ve42.co/notfound
 
 
 Response:
-Relative Net Vertical Impulse Determines Jumping Performance. ve42.co/relative
+NOT_FOUND. ve42.co/notfound
 
 
-=== 2025-02-23T20:09:41.357575 ===
+=== 2025-02-23T20:49:14.920296 ===
 Prompt:
 Mette H. Rasmussen, Katinka Rønnow Holler, Joe E. Baio, Cherno Jaye, Daniel A. Fischer, Stanislav N. Gorb, Tobias Weidner (Jul 2022). Evidence that gecko setae are coated with an ordered nanometre-thin lipid film. Biology Letters - ve42.co/evidence
 
 
 Response:
-Mette H. Rasmussen et al. (Jul 2022). Evidence that Gecko Setae are Coated with an Ordered Nanometre-thin Lipid Film. Biology Letters - ve42.co/evidence
+Mette H. Rasmussen et al. (Jul 2022). Evidence that gecko setae are coated with an ordered nanometre-thin lipid film. Biology Letters - ve42.co/evidence
 
 
-=== 2025-02-23T20:09:44.906436 ===
+=== 2025-02-23T20:49:16.491203 ===
 Prompt:
 8.3: Body Orientation During a Skydive. ve42.co/83bodyor
 
 
 Response:
 8.3: Body Orientation During a Skydive. ve42.co/83bodyor
+
+
+=== 2025-02-23T20:49:18.645995 ===
+Prompt:
+Hulk vs. Ant-Man - Coca-Cola: Coke Mini. ClipsyBox. https://www.youtube.com/watch?v=sMkGwCw7iv8
+
+
+Response:
+Hulk vs. Ant-Man - Coca-Cola: Coke Mini. ClipsyBox. https://youtube.com/watch?v=smkgcw7iv8
+
+
+=== 2025-02-23T20:49:20.694144 ===
+Prompt:
+Squirrel has 44" vertical jump straight up to bird feeder! jumping. El Gato. https://www.youtube.com/watch?v=ethwLHw46JM
+
+
+Response:
+Squirrel Has 44" Vertical Jump Straight up to Bird Feeder! El Gato. https://www.youtube.com/watch?v=ethwLHw46JM
+
+
+=== 2025-02-23T20:49:22.594736 ===
+Prompt:
+Who can jump bigger part #2 #viral #horse #jumping #cute #equestrian #dog. A-purpose . https://www.youtube.com/shorts/mJhf7wYNkYA
+
+
+Response:
+Who Can Jump Bigger. A-purpose. https://www.youtube.com/shorts/mJhf7wYNkYA

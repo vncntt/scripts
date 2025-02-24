@@ -12,6 +12,7 @@ import json
 from transformers import AutoTokenizer
 from PyPDF2 import PdfReader
 import io
+import time
 
 load_dotenv()
 
@@ -57,6 +58,7 @@ def youtube_handler(url:str) -> Dict:
         r'youtube\.com/watch\?v=([^&]+)',  # Standard watch URLs
         r'youtu\.be/([^?]+)',              # Shortened URLs
         r'youtube\.com/embed/([^?]+)',      # Embed URLs
+        r'youtube\.com/shorts/([^?]+)',     # Shorts URLs
     ]
     
     for pattern in patterns:
@@ -234,8 +236,7 @@ def pdf_handler(url:str) -> Dict:
     
     # Generate a filename-based identifier for the short URL
     pdf_name = os.path.basename(urlparse(url).path)
-    pdf_id = pdf_name.replace('.pdf', '').replace(' ', '-')
-    
+    pdf_id = ''.join(c for c in pdf_name.lower() if c.isalnum())[:8]
 
     return {
         'source_type': 'pdf',
@@ -419,6 +420,9 @@ def final_check(text:str)->str:
                                 - If a url ending is messy like ve42.co/Meyers%20et%20al%202002%20Topics, then clean up it to be something like ve42.co/meyers20topics
                                 - The url endings are only supposed to have lower case letters and numbers. If there are any other characters, clean it up.
 
+                                - If there are excessive hashtags or other irrelavent items in the title, remove them.
+                                - Example: "Who Can Jump Bigger Part #2 #viral #horse #jumping #cute #equestrian #dog?" should be "Who Can Jump Bigger"
+
                                 
                                 Do not change anything else.
                                 Do not make any changes that are not in one of the categories above. 
@@ -502,7 +506,19 @@ if __name__ == "__main__":
     df = pd.DataFrame(results)
     df.to_csv('references.csv', index=False)
     print(f"\nSaved {len(results)} results to references.csv")
+    
+    
 
     format_references('references.csv', 'references.txt')
     print("Saved references to references.txt")
+    
+    # Create link_generation.csv with only original_url and short_url columns
+    link_df = pd.DataFrame(results)[['original_url', 'short_url']]
+    # Remove 've42.co/' prefix from short_url column only if not error
+    link_df.loc[link_df['short_url'] != 've42.co/error', 'short_url'] = \
+        link_df.loc[link_df['short_url'] != 've42.co/error', 'short_url'].str.replace('ve42.co/', '')
+    link_df.to_csv('link_generation.csv', index=False)
+
+
+    print("Saved link mappings to link_generation.csv")
     
