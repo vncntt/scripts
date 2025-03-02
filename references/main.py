@@ -13,21 +13,56 @@ from transformers import AutoTokenizer
 from PyPDF2 import PdfReader
 import io
 import time
+import streamlit as st
+import base64
 
-load_dotenv()
+# For local development
+try:
+    load_dotenv()
+except:
+    pass  # Ignore if .env file doesn't exist
 
-# Clear llm_responses.txt at startup
-with open('llm_responses.txt', 'w', encoding='utf-8') as f:
-    f.write(f"=== New Run Starting {datetime.now().isoformat()} ===\n")
+# For Streamlit Cloud - access secrets
+def get_api_key(key_name):
+    if key_name in st.secrets:
+        return st.secrets[key_name]
+    return os.getenv(key_name)  # Fallback to environment variable
+
+# Set up page configuration
+st.set_page_config(
+    page_title="Reference Formatter",
+    page_icon="📚",
+    layout="wide"
+)
+
+# Initialize session state variables if they don't exist
+if 'results' not in st.session_state:
+    st.session_state.results = []
+if 'references_text' not in st.session_state:
+    st.session_state.references_text = ""
+if 'processed' not in st.session_state:
+    st.session_state.processed = False
+
+# Store llm responses in memory
+if 'llm_responses' not in st.session_state:
+    st.session_state.llm_responses = [f"=== New Run Starting {datetime.now().isoformat()} ===\n"]
+
+# Create a file in memory for llm_responses
+def update_llm_log(text):
+    st.session_state.llm_responses.append(text)
 
 tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
 # youtube setup stuff
-API_KEY = os.getenv("YOUTUBE_API_KEY")
-if not API_KEY:
-    raise ValueError("YOUTUBE_API_KEY is not set in the environment variables")
+@st.cache_resource
+def setup_youtube_api():
+    API_KEY = get_api_key("YOUTUBE_API_KEY")
+    if not API_KEY:
+        st.error("YOUTUBE_API_KEY is not set in the environment variables. YouTube references won't work.")
+        return None
+    return build('youtube', 'v3', developerKey=API_KEY)
 
-youtube = build('youtube', 'v3', developerKey=API_KEY)
+youtube = setup_youtube_api()
 
 def classify_url(url:str)-> Optional[Dict]:
     """
@@ -354,10 +389,15 @@ def parse_reference(text):
 
 def message(text:str)->str:
     try:
+        api_key = get_api_key('OPENROUTER_API_KEY')
+        if not api_key:
+            st.error("OpenRouter API key not found. Please add it to your .env file.")
+            return None
+            
         response = requests.post(
             url="https://openrouter.ai/api/v1/chat/completions",
             headers={
-                "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
+                "Authorization": f"Bearer {api_key}",
             },
             data=json.dumps({
                 "model": "qwen/qwen-turbo",
@@ -379,27 +419,33 @@ def message(text:str)->str:
             
             # Validate we got a non-empty response
             if not response_text or response_text.isspace():
-                print("Warning: Received empty response from LLM")
+                st.warning("Received empty response from LLM")
                 return None
                 
-            with open('llm_responses.txt', 'a', encoding='utf-8') as f:
-                f.write(f"\n\n=== {datetime.now().isoformat()} ===\nPrompt:\n{text}\n\nResponse:\n{response_text}\n")
+            # Log the response
+            log_text = f"\n\n=== {datetime.now().isoformat()} ===\nPrompt:\n{text}\n\nResponse:\n{response_text}\n"
+            update_llm_log(log_text)
             
-            print(f"{len(tokenizer.encode(text))} tokens")
-            print(f"cost is {0.02*len(tokenizer.encode(text))/1000000} USD")
- 
+            tokens = len(tokenizer.encode(text))
+            cost = 0.02 * tokens / 1000000
+            
             return response_text
         else:
-            print(f"Error: {response.status_code}")
+            st.error(f"API Error: {response.status_code}")
     except Exception as e:
-        print(f"Error: {e}")
+        st.error(f"Error: {e}")
         
 def final_check(text:str)->str:
     try:
+        api_key = get_api_key('OPENROUTER_API_KEY')
+        if not api_key:
+            st.error("OpenRouter API key not found. Please add it to your .env file.")
+            return text
+            
         response = requests.post(
             url="https://openrouter.ai/api/v1/chat/completions",
             headers={
-                "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
+                "Authorization": f"Bearer {api_key}",
             },
             data=json.dumps({
                 "model": "anthropic/claude-3.5-sonnet",
@@ -440,58 +486,53 @@ def final_check(text:str)->str:
             data = response.json()
             response_text = data['choices'][0]['message']['content']
             
-            print(response_text)
-            print(f"{len(tokenizer.encode(text))} tokens")
-            print(f"cost is {0.02*len(tokenizer.encode(text))/1000000} USD")
-
-            with open('llm_responses.txt', 'a', encoding='utf-8') as f:
-                f.write(f"\n\n=== {datetime.now().isoformat()} ===\nPrompt:\n{text}\n\nResponse:\n{response_text}\n")
- 
+            # Log the response
+            log_text = f"\n\n=== {datetime.now().isoformat()} ===\nPrompt:\n{text}\n\nResponse:\n{response_text}\n"
+            update_llm_log(log_text)
+            
             return response_text
         else:
-            print(f"Error: {response.status_code}")
+            st.error(f"API Error: {response.status_code}")
+            return text
     except Exception as e:
-        print(f"Error: {e}")
+        st.error(f"Error: {e}")
+        return text
  
 
-def format_references(csv_file: str, output_file: str):
-    """Format references from CSV into a text file."""
-    # Read CSV with empty strings instead of NaN
-    df = pd.read_csv(csv_file, na_values=[], keep_default_na=False)
+def format_references(results):
+    """Format references from results list into text."""
+    references_text = "References:\n\n"
     
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write("References:\n\n")
-        
-        for _, row in df.iterrows():
-            ref = "" 
-            if row['source_type'] == 'youtube':
-                ref = f"{row['title']}. {row['author']}. {row['original_url']}\n"
-            elif row['source_type'] == 'wikipedia':
-                ref = f"{row['title']}. {row['original_url']}\n"
-            elif row['source_type'] == 'website':
-                ref = f"{row['title']}. {row['short_url']}\n"
-            elif row['source_type'] == 'pdf' or 'doi':
-                ref = f"{row['author']} ({row['date']}). {row['title']}. {row['source']} - {row['short_url']}\n"
+    for row in results:
+        ref = "" 
+        if row['source_type'] == 'youtube':
+            ref = f"{row['author']}. {row['title']}. {row['original_url']}\n"
+        elif row['source_type'] == 'wikipedia':
+            ref = f"{row['title']}. {row['original_url']}\n"
+        elif row['source_type'] == 'website':
+            ref = f"{row['title']}. {row['short_url']}\n"
+        elif row['source_type'] == 'pdf' or row['source_type'] == 'doi':
+            ref = f"{row['author']} ({row['date']}). {row['title']}. {row['source']} - {row['short_url']}\n"
 
-            ref = final_check(ref)
-            f.write(ref + "\n")
+        ref = final_check(ref)
+        references_text += ref + "\n"
+    
+    return references_text
 
-
-if __name__ == "__main__":
-    # Read links from file
-    with open("urls.txt","r") as f:
-        links = [line.strip() for line in f if line.strip()]
-
+def process_urls(urls):
+    """Process a list of URLs and return results."""
     results = []
+    progress_bar = st.progress(0)
     
-    for url in links:
+    for i, url in enumerate(urls):
         try:
-            print(f"Processing: {url}")
+            st.write(f"Processing: {url}")
             result = classify_url(url)
             results.append(result)
-            print(result)
+            # Update progress
+            progress_bar.progress((i + 1) / len(urls))
         except Exception as e:
-            print(f"Error processing {url}: {e}")
+            st.error(f"Error processing {url}: {e}")
             results.append({
                 'source_type': 'ERROR',
                 'title': 'ERROR',
@@ -502,23 +543,79 @@ if __name__ == "__main__":
                 'short_url': ''
             })
     
-    # Store results
-    df = pd.DataFrame(results)
-    df.to_csv('references.csv', index=False)
-    print(f"\nSaved {len(results)} results to references.csv")
-    
-    
+    return results
 
-    format_references('references.csv', 'references.txt')
-    print("Saved references to references.txt")
+def get_download_link(df, filename, text):
+    """Generates a link to download the dataframe as a CSV file."""
+    csv = df.to_csv(index=False)
+    b64 = base64.b64encode(csv.encode()).decode()
+    href = f'<a href="data:file/csv;base64,{b64}" download="{filename}">Download {text}</a>'
+    return href
+
+def get_text_download_link(text, filename, link_text):
+    """Generates a link to download text as a file."""
+    b64 = base64.b64encode(text.encode()).decode()
+    href = f'<a href="data:file/txt;base64,{b64}" download="{filename}">{link_text}</a>'
+    return href
+
+def main():
+    st.title("Reference Formatter 📚")
+    st.write("Enter URLs (one per line) to generate formatted references.")
     
-    # Create link_generation.csv with only original_url and short_url columns
-    link_df = pd.DataFrame(results)[['original_url', 'short_url']]
-    # Remove 've42.co/' prefix from short_url column only if not error
-    link_df.loc[link_df['short_url'] != 've42.co/error', 'short_url'] = \
-        link_df.loc[link_df['short_url'] != 've42.co/error', 'short_url'].str.replace('ve42.co/', '')
-    link_df.to_csv('link_generation.csv', index=False)
+    # Input area for URLs
+    urls_input = st.text_area("Enter URLs (one per line):", height=200)
+    
+    # Process button
+    if st.button("Process URLs"):
+        if not urls_input.strip():
+            st.warning("Please enter at least one URL.")
+        else:
+            urls = [url.strip() for url in urls_input.split('\n') if url.strip()]
+            
+            with st.spinner("Processing URLs..."):
+                st.session_state.results = process_urls(urls)
+                
+                # Format references
+                st.session_state.references_text = format_references(st.session_state.results)
+                
+                # Mark as processed
+                st.session_state.processed = True
+            
+            st.success(f"Processed {len(urls)} URLs!")
+    
+    # Display results if processed
+    if st.session_state.processed and st.session_state.results:
+        st.header("Results")
+        
+        # Convert results to DataFrame
+        df = pd.DataFrame(st.session_state.results)
+        
+        # Display results in a table
+        st.dataframe(df)
+        
+        # Generate download links
+        st.markdown(get_download_link(df, "references.csv", "References CSV"), unsafe_allow_html=True)
+        
+        # Create link_generation.csv
+        link_df = pd.DataFrame(st.session_state.results)[['original_url', 'short_url']]
+        # Remove 've42.co/' prefix from short_url column only if not error
+        link_df.loc[link_df['short_url'] != 've42.co/error', 'short_url'] = \
+            link_df.loc[link_df['short_url'] != 've42.co/error', 'short_url'].str.replace('ve42.co/', '')
+        
+        st.markdown(get_download_link(link_df, "link_generation.csv", "Link Generation CSV"), unsafe_allow_html=True)
+        
+        # Display formatted references
+        st.header("Formatted References")
+        st.text_area("References:", st.session_state.references_text, height=300)
+        
+        st.markdown(get_text_download_link(st.session_state.references_text, "references.txt", "Download References Text"), unsafe_allow_html=True)
+        
+        # Display LLM API logs if expanded
+        with st.expander("View LLM API Logs"):
+            st.text("".join(st.session_state.llm_responses))
+            st.markdown(get_text_download_link("".join(st.session_state.llm_responses), "llm_responses.txt", 
+                                              "Download LLM Logs"), unsafe_allow_html=True)
 
-
-    print("Saved link mappings to link_generation.csv")
+if __name__ == "__main__":
+    main()
     
